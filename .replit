@@ -1,0 +1,1 @@
+run = "yarn build && yarn dev"
