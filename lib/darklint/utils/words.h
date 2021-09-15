@@ -1,1 +1,1 @@
-std::vector<std::string> words = {"I", "wow"}
+std::vector<std::string> words = {"good", "cool", "coolio", "pogger", "pog", "wow", "nice", "super", "amazing", "awesome", "actually", "beautiful", "look", "pleasant", "very", "said", "great", "noice", "bad", "happy"}
