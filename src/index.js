@@ -1,17 +1,18 @@
 import chalk from 'chalk'
 import fs from 'fs'
-import { createRequire } from 'module';
+import darklint from './darklint/lint.js'
 
-const require = createRequire(import.meta.url);
-const darklint = require('../build/Release/main.node');
 
 const args = process.argv.splice(2);
 
-let text = `	Hello
+// let text = `${fs.readFileSync(args[0], { encoding: 'utf-8' })}`
 
-Well, wow wow
-I just dont get it
-This is just dumb
-`
 
-darklint.lint(text)
+
+darklint(`Hello! 
+
+My name is dark! And that's cool!
+I like this!
+
+
+`)

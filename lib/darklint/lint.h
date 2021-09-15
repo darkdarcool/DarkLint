@@ -41,6 +41,23 @@ void lint(std::string code) {
 				std::cout << greencolor() << "~~~^" << resetcolor() << std::endl;
 				std::cout << linenumber + 1 << ": " << text[linenumber + 1];
 			}
+			for (std::string word : contractions) {
+				if (utils::find(line, word)) {
+					std::cout << "\n\033[34m_________________________________\033[0m" << std::endl << std::endl;
+					error::error("Contractions", "Don't use contractions! Not using them can increase word count, and sound more professional!", linenumber);
+					std::string s = process(line, word);
+					if (linenumber - 1 >= text.size())  {
+						std::cout << linenumber - 1 << ": " << text[linenumber - 1] << std::endl;
+						std::cout << "ooooof"
+					}
+					std::cout << linenumber << ": " << line << std::endl; 
+					for(char _e : s) {
+    				std::cout << greencolor() << "~";
+					}
+					std::cout << greencolor() << "~~~^" << resetcolor() << std::endl;
+					std::cout << linenumber + 1 << ": " << text[linenumber + 1] << std::endl;
+				}
+			}
 		}
 	}
 }
