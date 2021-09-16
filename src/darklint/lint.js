@@ -19,6 +19,7 @@ export default function darklint(content) {
 	for (let i = 0; i < text.length; i++) {
 		let line = text[i];
 		words.words.forEach((word) => {
+			word = ` ${word} `
 			if (line.includes(word)) {
 				console.log("\x1b[34m____________________________________________________\x1b[0m")
 				err('Bad words', 'Never use these words! They aren\'t good for essays, and your teacher will mark you down!');
